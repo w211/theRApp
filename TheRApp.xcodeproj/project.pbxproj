@@ -12,6 +12,7 @@
 		EA8157AF1CA1E86F00910C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8157AD1CA1E86F00910C7C /* Main.storyboard */; };
 		EA8157B11CA1E86F00910C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8157B01CA1E86F00910C7C /* Assets.xcassets */; };
 		EA8157B41CA1E86F00910C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8157B21CA1E86F00910C7C /* LaunchScreen.storyboard */; };
+		EA8157C01CA207F600910C7C /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EA8157BF1CA207F600910C7C /* 1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EA8157B01CA1E86F00910C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA8157B31CA1E86F00910C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA8157B51CA1E86F00910C7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8157BF1CA207F600910C7C /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		EA8157A81CA1E86F00910C7C /* TheRApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA8157BC1CA1FF5100910C7C /* Model */,
+				EA8157BB1CA1FF4B00910C7C /* View */,
+				EA8157BD1CA1FF6100910C7C /* Controller */,
+				EA8157BE1CA1FF6800910C7C /* Resources */,
 				EA8157A91CA1E86F00910C7C /* AppDelegate.swift */,
-				EA8157AB1CA1E86F00910C7C /* ViewController.swift */,
 				EA8157AD1CA1E86F00910C7C /* Main.storyboard */,
 				EA8157B01CA1E86F00910C7C /* Assets.xcassets */,
 				EA8157B21CA1E86F00910C7C /* LaunchScreen.storyboard */,
 				EA8157B51CA1E86F00910C7C /* Info.plist */,
 			);
 			path = TheRApp;
+			sourceTree = "<group>";
+		};
+		EA8157BB1CA1FF4B00910C7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EA8157BC1CA1FF5100910C7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EA8157BD1CA1FF6100910C7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EA8157AB1CA1E86F00910C7C /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EA8157BE1CA1FF6800910C7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA8157BF1CA207F600910C7C /* 1.mp3 */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8157C01CA207F600910C7C /* 1.mp3 in Resources */,
 				EA8157B41CA1E86F00910C7C /* LaunchScreen.storyboard in Resources */,
 				EA8157B11CA1E86F00910C7C /* Assets.xcassets in Resources */,
 				EA8157AF1CA1E86F00910C7C /* Main.storyboard in Resources */,

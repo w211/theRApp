@@ -7,19 +7,66 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var text: UILabel!
+    @IBOutlet weak var volume: UISlider!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var skip: UISlider!
+    
+    var musicPlayer: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        initAudio()
+        
+    }
+    
+    func initAudio() {
+        
+        let path = NSBundle.mainBundle().pathForResource("1", ofType: "mp3")!
+        
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func playBtnPressed(sender: UIButton!) {
+    
+        if musicPlayer.playing {
+            musicPlayer.stop()
+            sender.alpha = 0.2
+        } else {
+            musicPlayer.play()
+            sender.alpha = 10.0
+        }
+    
     }
-
+    
+    @IBAction func forwardBtnPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func backBtnPressed(sender: AnyObject) {
+        initAudio()s
+    }
+    
+    @IBAction func volumeMoved(sender: AnyObject) {
+            musicPlayer.volume = volume.value
+    }
+    
+    @IBAction func skipSliderMoved(sender: AnyObject) {
+    }
+    
+    
 
 }
 
