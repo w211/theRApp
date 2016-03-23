@@ -17,17 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcg-Sn-xFM">
-                                <rect key="frame" x="129" y="287" width="343" height="105"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="105" id="6qE-wF-9RR"/>
-                                    <constraint firstAttribute="width" constant="343" id="feg-n8-lFf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="sMr-1c-D6k">
                                 <rect key="frame" x="228" y="117" width="145" height="142"/>
                                 <animations/>
@@ -36,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="145" id="nEy-Bf-hKj"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf7-mk-aYB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf7-mk-aYB" userLabel="play">
                                 <rect key="frame" x="254" y="478" width="93" height="93"/>
                                 <animations/>
                                 <constraints>
@@ -59,7 +48,7 @@
                                     <action selector="volumeMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="eoy-Yb-FTF"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-iQ-As9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPh-iQ-As9" userLabel="back">
                                 <rect key="frame" x="129" y="478" width="93" height="93"/>
                                 <animations/>
                                 <constraints>
@@ -71,7 +60,7 @@
                                     <action selector="backBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JnQ-Jw-KqO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-SK-DNZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhK-SK-DNZ" userLabel="forward">
                                 <rect key="frame" x="379" y="477" width="93" height="94"/>
                                 <animations/>
                                 <constraints>
@@ -94,6 +83,17 @@
                                     <action selector="skipSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="bIS-CR-Ffy"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcg-Sn-xFM">
+                                <rect key="frame" x="129" y="287" width="343" height="105"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="6qE-wF-9RR"/>
+                                    <constraint firstAttribute="width" constant="343" id="feg-n8-lFf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.48494269849999999" green="0.69269910850000005" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -129,7 +129,7 @@
                     <navigationItem key="navigationItem" id="Lj5-zw-fky"/>
                     <connections>
                         <outlet property="image" destination="sMr-1c-D6k" id="OXH-9Y-BPk"/>
-                        <outlet property="skip" destination="Def-hg-UcL" id="ZQ2-iN-XfX"/>
+                        <outlet property="skipSlider" destination="Def-hg-UcL" id="PWh-KK-oXJ"/>
                         <outlet property="text" destination="qcg-Sn-xFM" id="O85-eI-fl6"/>
                         <outlet property="volume" destination="B6Q-G2-VXk" id="ZN1-Gy-aat"/>
                     </connections>
